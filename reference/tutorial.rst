@@ -203,7 +203,7 @@ Parabéns, você esta voando com o Phalcon!
 
 Enviando saídas para uma view
 ^^^^^^^^^^^^^^^^^^^^^^^^
-Envidando uma saída da controladora na tela as vezes é necessário, mas não é desejável como a maioria dos puristas da comunidade MVC irão atestar. Qualquer coisa que será impresso na tela deverá ser passado para a view, e ela sera responsável por essa visualização. Phalcon irá procurar por uma view de mesmo nome da ultima action executada dentro de um diretório nomeado com o nome da ultima controladora executada. No nosso caso (app/views/index/index.phtml):
+Enviando uma saída da controladora na tela as vezes é necessário, mas não é desejável como a maioria dos puristas da comunidade MVC irão atestar. Qualquer coisa que será impresso na tela deverá ser passado para a view, e ela sera responsável por essa visualização. Phalcon irá procurar por uma view de mesmo nome da ultima action executada dentro de um diretório nomeado com o nome da ultima controladora executada. No nosso caso (app/views/index/index.phtml):
 
 .. code-block:: php
 
