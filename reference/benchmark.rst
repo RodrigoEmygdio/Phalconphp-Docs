@@ -8,7 +8,7 @@ Nós encorajamos programadores copiarem nossas suítes de teste que utilizamos p
 
 Qual foi o ambiente de teste utilizado?
 ------------------------------
-O chace alternativo do PHP (APC_) foi ativado para todos os frameworks. O modulo  rewrite do Apache foi desativado, sempre que possível, para evitar potencial adição de overheads.
+O cache alternativo do PHP (APC_) foi ativado para todos os frameworks. O modulo  rewrite do Apache foi desativado, sempre que possível, para evitar potencial adição de overheads.
 
 O hardware do ambiente de teste foi o seguinte:
 
