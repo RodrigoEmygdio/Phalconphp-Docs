@@ -798,7 +798,7 @@ Sets a list of attributes that must be skipped from the generated UPDATE stateme
 
 
 
-protected :doc:`Phalcon\\Mvc\\Model\\Relation <Phalcon_Mvc_Model_Relation>`  **hasOne** ()
+public :doc:`Phalcon\\Mvc\\Model\\Relation <Phalcon_Mvc_Model_Relation>`  **hasOne** ()
 
 Setup a 1-1 relation between two models 
 
@@ -819,7 +819,7 @@ Setup a 1-1 relation between two models
 
 
 
-protected :doc:`Phalcon\\Mvc\\Model\\Relation <Phalcon_Mvc_Model_Relation>`  **belongsTo** ()
+puplic :doc:`Phalcon\\Mvc\\Model\\Relation <Phalcon_Mvc_Model_Relation>`  **belongsTo** ()
 
 Setup a relation reverse 1-1  between two models 
 
@@ -840,7 +840,7 @@ Setup a relation reverse 1-1  between two models
 
 
 
-protected :doc:`Phalcon\\Mvc\\Model\\Relation <Phalcon_Mvc_Model_Relation>`  **hasMany** ()
+puplic :doc:`Phalcon\\Mvc\\Model\\Relation <Phalcon_Mvc_Model_Relation>`  **hasMany** ()
 
 Setup a relation 1-n between two models 
 
@@ -861,7 +861,7 @@ Setup a relation 1-n between two models
 
 
 
-protected :doc:`Phalcon\\Mvc\\Model\\Relation <Phalcon_Mvc_Model_Relation>`  **hasManyToMany** ()
+puplic :doc:`Phalcon\\Mvc\\Model\\Relation <Phalcon_Mvc_Model_Relation>`  **hasManyToMany** ()
 
 Setup a relation n-n between two models through an intermediate relation 
 
@@ -890,7 +890,7 @@ Setup a relation n-n between two models through an intermediate relation
 
 
 
-protected  **addBehavior** ()
+public  **addBehavior** ()
 
 Setups a behavior in a model 
 
