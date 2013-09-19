@@ -138,7 +138,7 @@ Gerenciamento de Dependências.
 ^^^^^^^^^^^^^^^^^^^^^
 Um conceito muito importante que deve ser entendido quando se trabalha com o Phalcon é a sua Injeção de dependência (:doc:`dependency injection container <di>`). Este conceito pode parecer complexo, mas na verdade é muito simples e prático. 
 
-Um contêiner de serviço (service container) é um recipiente (caixa ou sacola) onde você de forma global armazena serviços (Objetos, Interfaces e etc..) que serão utilizados por nossa aplicação para que a mesma funcione. Cada vez o framework solicita um componente, ele irá pedir ao recipiente utilizando um nome acordado para o serviço. Desde que o Phalcon é um framework altamente desacoplável (possui um baixo acoplamento), Phalcon\\DI atua como uma cola (incluindo os serviço como se estivesse colando o mesmo dentro da aplicação), facilitando dessa forma a integração de diferentes componentes, e tais componentes trabalham juntos de forma transparente atingido os seus objetivos.
+Um contêiner de serviço (service container) é um recipiente (caixa ou sacola) onde você de forma global armazenar serviços (Objetos, Interfaces e etc..) que serão utilizados por nossa aplicação para que a mesma funcione. Cada vez o framework solicita um componente, ele irá pedir ao recipiente utilizando um nome acordado para o serviço. Desde que o Phalcon é um framework altamente desacoplável (possui um baixo acoplamento), Phalcon\\DI atua como uma cola (incluindo os serviço como se estivesse colando o mesmo dentro da aplicação), facilitando dessa forma a integração de diferentes componentes, e tais componentes trabalham juntos de forma transparente atingido os seus objetivos.
 
 .. code-block:: php
 
@@ -227,9 +227,9 @@ Nossa controladora (app/controllers/IndexController.php) agora tem uma definiç�
 
 A saída do browser deverá permanecer a mesa. O :doc:`Phalcon\\Mvc\\View <../api/Phalcon_Mvc_View>` componente estático é automaticamente criado quando a execução da action é terminada. Saiba mais a respeito :doc:`views usage here <views>` . 
 
-Designing a sign up form
+Projetando um Formulário de Inscrição
 ^^^^^^^^^^^^^^^^^^^^^^^^
-Now we will change the index.phtml view file, to add a link to a new controller named "signup". The goal is to allow users to sign up in our application.
+Agora vamos alterar a view index.phtml, adicionando um novo link da controladora chamada "signup". O objetivo é permitir aos novos usuários fazerem o cadastro dentro da nossa aplicação.
 
 .. code-block:: php
 
@@ -239,18 +239,19 @@ Now we will change the index.phtml view file, to add a link to a new controller 
 
     echo Phalcon\Tag::linkTo("signup", "Sign Up Here!");
 
-The generated HTML code displays an "A" html tag linking to a new controller:
+O HTML gerado exibi uma tag “a” lincando a uma nova controladora: 
 
 .. code-block:: html
 
     <h1>Hello!</h1> <a href="/test/signup">Sign Up Here!</a>
 
-To generate the tag we use the class :doc:`\Phalcon\\Tag <../api/Phalcon_Tag>`. This is a utility class that allows us to build HTML tags with framework conventions in mind. A more detailed article regarding HTML generation can be :doc:`found here <tags>`
+Para gerar tags você pode usar o :doc:`\Phalcon\\Tag <../api/Phalcon_Tag>`. Essa classe utilitária permite-nos construir tags HTML utilizando as convenções do framerowk. Para maiores detalhes quanto a geração de HTML veja pode ser :doc:`encontrado aqui <tags>`
+
 
 .. figure:: ../_static/img/tutorial-2.png
     :align: center
 
-Here is the controller Signup (app/controllers/SignupController.php):
+Aqui está a controladora Signup(app/controllers/SignupController.php):
 
 .. code-block:: php
 
@@ -266,7 +267,7 @@ Here is the controller Signup (app/controllers/SignupController.php):
 
     }
 
-The empty index action gives the clean pass to a view with the form definition (app/views/signup/index.phtml):
+A action index em branco, nos deu acesso direto a view que possui a definição do formulário (app/views/signup/index.phtml): 
 
 .. code-block:: html+php
 
@@ -292,14 +293,14 @@ The empty index action gives the clean pass to a view with the form definition (
 
     </form>
 
-Viewing the form in your browser will show something like this:
+Visualizando o formulário no seu browser você verá algo como isto:
 
 .. figure:: ../_static/img/tutorial-3.png
     :align: center
 
-:doc:`Phalcon\\Tag <../api/Phalcon_Tag>` also provides useful methods to build form elements.
+:doc:`Phalcon\\Tag <../api/Phalcon_Tag>` também prove métodos uteis para construção de elementos do formulário.
 
-The Phalcon\\Tag::form method receives only one parameter for instance, a relative uri to a controller/action in the application.
+O método Phalcon\\Tag::form recebe somente um parâmetro  method receives only one parameter for instance, a relative uri to a controller/action in the application.
 
 By clicking the "Send" button, you will notice an exception thrown from the framework,
 indicating that we are missing the "register" action in the controller "signup". Our public/index.php file throws this exception:
