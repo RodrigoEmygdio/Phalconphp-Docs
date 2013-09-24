@@ -300,14 +300,13 @@ Visualizando o formulário no seu browser você verá algo como isto:
 
 :doc:`Phalcon\\Tag <../api/Phalcon_Tag>` também prove métodos uteis para construção de elementos do formulário.
 
-O método Phalcon\\Tag::form recebe somente um parâmetro  method receives only one parameter for instance, a relative uri to a controller/action in the application.
+O método Phalcon\\Tag::form nesse exemplo recebe somente um parâmetro, uma uri relativa a controller/action da aplicação.
 
-By clicking the "Send" button, you will notice an exception thrown from the framework,
-indicating that we are missing the "register" action in the controller "signup". Our public/index.php file throws this exception:
+Clicando no botão “Send”, você irá perceber que o framework irá emitir uma exceção, indicando que você não definiu a action "register" na controladora "signup". Nosso public/index.php disparou essa exceção:
 
     PhalconException: Action "register" was not found on controller "signup"
 
-Implementing that method will remove the exception:
+Implementando o método (action) da controladora irá remover essa exceção:
 
 .. code-block:: php
 
@@ -328,14 +327,13 @@ Implementing that method will remove the exception:
 
     }
 
-If you click the "Send" button again, you will see a blank page. The name and email input provided by the user should be stored
-in a database. According to MVC guidelines, database interactions must be done through models so as to ensure clean object-oriented code.
+Se você clicar no botão “Send” outra vez, irá ver uma pagina em branco. O nome e o e-mail proveniente da entrada do usuário via formulário, deverá ser armazenado em um banco de dados. De acordo com as diretrizes do MVC, as interações com o banco de dados deverão ser feitas através das models, dessa forma garantindo uma estrutura orientada a objetos clara e limpa. 
 
 Creating a Model
 ^^^^^^^^^^^^^^^^
-Phalcon brings the first ORM for PHP entirely written in C-language. Instead of increasing the complexity of development, it simplifies it.
+Phalcon trás o primeiro ORM para PHP inteiramente escrito em C. Ao invés de aumentar a complexidade do desenvolvimento ficou mais simples.
 
-Before creating our first model, we need a database table to map it to. A simple table to store registered users can be defined like this:
+Antes de criar nossa primeira model, nós precisamos de uma tabela que irá mapear essa model. Uma tabela simples para armazenar os usuários registrados pode ser da seguinte forma:
 
 .. code-block:: sql
 
@@ -346,7 +344,7 @@ Before creating our first model, we need a database table to map it to. A simple
       PRIMARY KEY (`id`)
     );
 
-A model should be located in the app/models directory (app/models/Users.php). The model mapping to "users" table:
+No caso do nosso exemplo a model deverá estar localizada no diretório app/models (app/models/Users.php). O mapeamento para tabela "users":
 
 .. code-block:: php
 
@@ -357,10 +355,9 @@ A model should be located in the app/models directory (app/models/Users.php). Th
 
     }
 
-Setting a Database Connection
+Configurando uma Conexão com o Banco de Dados
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-In order to be able to use a database connection and subsequently access data through our models, we need to specify it in our bootstrap process.
-A database connection is just another service that our application has that can be use for several components:
+A fim de ser capaz utilizar uma conexão com o banco de dados e posteriormente acessar os dados através da nossa model, nós precisamos especificar-la no nosso bootstrap (public/index.php). Uma conexão com o banco de dados nada mais é do que um outro serviço da nossa aplicação, que será utilizada por vários outros componentes:
 
 .. code-block:: php
 
@@ -404,7 +401,7 @@ A database connection is just another service that our application has that can 
          echo "PhalconException: ", $e->getMessage();
     }
 
-With the correct database parameters, our models are ready to work and interact with the rest of the application.
+Com os parâmetros corretos de acesso a base de dados, nossa model já esta pronta para trabalhar e interagir com o resto da nossa aplicação.
 
 Storing data using models
 ^^^^^^^^^^^^^^^^^^^^^^^^^
