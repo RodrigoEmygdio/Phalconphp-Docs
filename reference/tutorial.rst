@@ -300,14 +300,13 @@ Visualizando o formulário no seu browser você verá algo como isto:
 
 :doc:`Phalcon\\Tag <../api/Phalcon_Tag>` também prove métodos uteis para construção de elementos do formulário.
 
-O método Phalcon\\Tag::form recebe somente um parâmetro  method receives only one parameter for instance, a relative uri to a controller/action in the application.
+O método Phalcon\\Tag::form nesse exemplo recebe somente um parâmetro, uma uri relativa a controller/action da aplicação.
 
-By clicking the "Send" button, you will notice an exception thrown from the framework,
-indicating that we are missing the "register" action in the controller "signup". Our public/index.php file throws this exception:
+Clicando no botão “Send”, você irá perceber que o framework irá emitir uma exceção, indicando que você não definiu a action "register" na controladora "signup". Nosso public/index.php disparou essa exceção:
 
     PhalconException: Action "register" was not found on controller "signup"
 
-Implementing that method will remove the exception:
+Implementando o método (action) da controladora irá remover essa exceção:
 
 .. code-block:: php
 
@@ -328,8 +327,7 @@ Implementing that method will remove the exception:
 
     }
 
-If you click the "Send" button again, you will see a blank page. The name and email input provided by the user should be stored
-in a database. According to MVC guidelines, database interactions must be done through models so as to ensure clean object-oriented code.
+Se você clicar no botão “Send” outra vez, irá ver uma pagina em branco. O nome e o e-mail proveniente da entrada do usuário via formulário, deverá ser armazenado em um banco de dados. De acordo as diretrizes do MVC, as interações com o banco de dados deverão ser feitas através das models, dessa forma garantindo uma estrutura orientada a objetos clara e limpa. 
 
 Creating a Model
 ^^^^^^^^^^^^^^^^
