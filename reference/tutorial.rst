@@ -334,7 +334,7 @@ Criando uma Model
 ^^^^^^^^^^^^^^^^
 Phalcon trás o primeiro ORM para PHP inteiramente escrito em C. Ao invés de aumentar a complexidade do desenvolvimento ficou mais simples.
 
-Antes de criar nossa primeira model, nós precisamos de uma tabela que irá mapear essa model. Uma tabela simples para armazenar os usuários registrados pode ser da seguinte forma:
+Antes de criar nossa primeira model, nós precisamos de uma tabela que irá mapear essa model. Uma tabela simples para armazenar os usuários registrados pode ser da criada da seguinte forma:
 
 .. code-block:: sql
 
