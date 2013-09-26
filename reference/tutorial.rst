@@ -345,7 +345,7 @@ Antes de criar nossa primeira model, nós precisamos de uma tabela que irá mape
       PRIMARY KEY (`id`)
     );
 
-No caso do nosso exemplo a model deverá estar localizada no diretório app/models (app/models/Users.php). O mapeamento para tabela "users":
+No caso do nosso exemplo a model deverá estar localizada no diretório app/models (app/models/Users.php).A model faz o mapeamento para tabela "users":
 
 .. code-block:: php
 
