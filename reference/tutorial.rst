@@ -327,9 +327,10 @@ Implementando o método (action) da controladora irá remover essa exceção:
 
     }
 
+
 Se você clicar no botão “Send” outra vez, irá ver uma pagina em branco. O nome e o e-mail proveniente da entrada do usuário via formulário, deverá ser armazenado em um banco de dados. De acordo com as diretrizes do MVC, as interações com o banco de dados deverão ser feitas através das models, dessa forma garantindo uma estrutura orientada a objetos clara e limpa. 
 
-Creating a Model
+Criando uma Model
 ^^^^^^^^^^^^^^^^
 Phalcon trás o primeiro ORM para PHP inteiramente escrito em C. Ao invés de aumentar a complexidade do desenvolvimento ficou mais simples.
 
